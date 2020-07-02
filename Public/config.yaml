@@ -1,0 +1,3 @@
+dev : 'qx-dev.adtopmob.com'
+test : 'qx-fat.qianshi188.com'
+env : 'qx-fat.qianshi188.com'
