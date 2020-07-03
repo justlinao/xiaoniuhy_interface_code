@@ -7,6 +7,7 @@ db_passwd = 'XW7hgf8fa##iCBiJiZp75K'
 db = 'qx_live_test'
 list = []
 
+
 class DB:
     def __init__(self):
         self.conn = pymysql.connect(
@@ -14,7 +15,6 @@ class DB:
             port=int(db_port),
             user=db_user,
             passwd=db_passwd,
-            # db=db,
             # cursorclass=pymysql.cursors.DictCursor,  # 可以使查询出的单条数据数据为字典形式，多条数据为列表套字典，
             charset='utf8'
         )
