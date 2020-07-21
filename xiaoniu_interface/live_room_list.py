@@ -1,7 +1,7 @@
 import requests
 import json
-from Public.req_header import login_headers
-headers = login_headers()
+from Public.req_header import form_headers
+headers = form_headers()
 
 
 def liveroomlist():

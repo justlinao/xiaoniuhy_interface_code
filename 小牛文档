@@ -21,11 +21,8 @@ http://jk.openxiaoniu.com/job/%E5%8D%83%E5%AF%BB%E7%9B%B4%E6%92%ADH5/   H5Jenkin
 UI设计：https://lanhuapp.com/url/WzJsr-7GzoY
 
 
-压测接口：
-首页----直播列表查询
-排行榜----排行榜查询
-首页-----已关注主播直播人数
-直播间----用户进直播间查询直播间信息、主播开始直播接口、主播结束直播接口
-用户----批量查询用户资料
-关注----直播动态列表查询
-礼物----送礼、获取背包面板
+navicat Premium 数据库管理工具
+finalshell 服务端日志管理工具
+redis 数据库缓存管理工具
+mongo db
+sql 语句

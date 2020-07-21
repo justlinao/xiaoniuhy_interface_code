@@ -5,7 +5,7 @@ db_port = '3306'
 db_user = 'qx_live_test'
 db_passwd = 'XW7hgf8fa##iCBiJiZp75K'
 db = 'qx_live_test'
-list = []
+
 
 
 class DB:
@@ -25,6 +25,7 @@ class DB:
         :param sql: 被执行的sql语句
         :return: 返回查询的结果
         '''
+        list = []
         cur = self.conn.cursor()  # 建立游标
         cur.execute(sql)  # sql语句
         self.conn.commit()  # 提交

@@ -22,9 +22,11 @@ def hmac_sha256(key, appSecret):
     hmacsha256加密
     return:加密结果转成16进制字符串形式
     """
-    message = appSecret.encode('utf-8')
-    sign = hmac.new(key.encode('utf-8'), message, digestmod=hashlib.sha256).hexdigest()
-    print(sign.upper())
+    appSecret = appSecret.encode('UTF-8')
+    key = key.encode('UTF-8')
+    sign = hmac.new(appSecret, key, digestmod=hashlib.sha256).hexdigest()
+    sign.encode()
+    # print(sign.upper())
     return sign.upper()
 
 
