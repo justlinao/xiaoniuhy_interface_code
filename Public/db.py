@@ -7,7 +7,6 @@ db_passwd = 'XW7hgf8fa##iCBiJiZp75K'
 db = 'qx_live_test'
 
 
-
 class DB:
     def __init__(self):
         self.conn = pymysql.connect(
