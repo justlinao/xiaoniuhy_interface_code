@@ -6,6 +6,7 @@ import hashlib
 import requests
 import json
 timestamp = str(int(time.time()))
+print(timestamp)
 appId = '1149960309183299584'   # 1149960309183299584
 key = appId + str(timestamp)
 appSecret = '1acdf792a54511e993fc506b4bbe1bc4'
@@ -20,7 +21,7 @@ def hmac_sha256(key, appSecret):
     key = key.encode('UTF-8')
     sign = hmac.new(appSecret, key, digestmod=hashlib.sha256).hexdigest()
     sign.encode()
-    # print(sign.upper())
+    print(sign.upper())
     return sign.upper()
 
 

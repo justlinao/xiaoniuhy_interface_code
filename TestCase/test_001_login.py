@@ -12,7 +12,7 @@ class Login(unittest.TestCase):
     @ddt.unpack
     def test_login(self, A, B):
         self.login = login(A, B)
-        self.assertEquals(self.login, 200, '通过')
+        self.assertEquals(self.login, 199, '通过')
         get_log().info('登录接口请求结果%s' % self.login)
 
     def tearDown(self):

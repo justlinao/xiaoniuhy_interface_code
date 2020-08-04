@@ -10,7 +10,7 @@ def get_log():
 
     log_time = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))  # 当前时间 精确到分
     log_path = os.path.dirname(os.getcwd()) + '/Log/'  # log存放路径
-    log_name = log_path + log_time + 'log' + '.小牛文档'  #
+    log_name = log_path + log_time + 'xiaoniu_' + 'log' + '.txt'  #
 
     fh = logging.FileHandler(log_name)  # 日志到文件
     fh.setLevel(logging.INFO)

@@ -21,8 +21,20 @@ http://jk.openxiaoniu.com/job/%E5%8D%83%E5%AF%BB%E7%9B%B4%E6%92%ADH5/   H5Jenkin
 UI设计：https://lanhuapp.com/url/WzJsr-7GzoY
 
 
-navicat Premium 数据库管理工具
-finalshell 服务端日志管理工具
-redis 数据库缓存管理工具
-mongo db
-sql 语句
+
+
+
+内部礼物下发：gift_knapsack_record表  字段：gift_grant_type为2 内部礼物gift_source为4，撤回为5，撤回后gift_knapsack_sum里的下发的礼物数据删除掉
+gift_grant_relation 礼物发放主播映射 pass
+用户的账户表 account_trade_record source_type为4 pass
+主播收益 和 用户赠送礼物gift_send_receive_record 表里的gift_grant_type为2 pass
+主播收益星光account_star_light表 pass
+inside_can_user_star_light 内部礼物可用星光值 pass
+total_star_light 总累计收获星光值 pass
+
+用户id：213283522
+主播customerid 527512cc52214730829f79a5b266f706
+主播customerid：04a096016a4143a1a41d30064b456268 uid：213283759
+安卓用户customerid ：c3d69445835d4fc2b52903321cfda555
+IOS用户customerid：6da407e07f1348349be91b86356ca339
+
