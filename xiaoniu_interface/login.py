@@ -4,7 +4,7 @@ from Public.req_header import headers
 from Public.get_env_yaml import read_config
 headers = headers()
 env = read_config()
-print(env)
+# print(env)
 
 
 def login(customerPhone, phoneCode):

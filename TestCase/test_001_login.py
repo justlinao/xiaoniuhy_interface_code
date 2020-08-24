@@ -1,3 +1,6 @@
+"""
+只是用ddt进行数据驱动
+"""
 import unittest
 from xiaoniu_interface.login import login
 import ddt
@@ -12,7 +15,7 @@ class Login(unittest.TestCase):
     @ddt.unpack
     def test_login(self, A, B):
         self.login = login(A, B)
-        self.assertEquals(self.login, 200, '通过')
+        self.assertEquals(self.login, 200, '与预期不符合用例失败')
         get_log().info('登录接口请求结果%s' % self.login)
 
     def tearDown(self):
