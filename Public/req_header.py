@@ -2,19 +2,13 @@ import time
 import hmac
 import hashlib
 '''
-不同端对应的 app-id，app-secret
-api.security.app.account-config.[android-1].app-id = 1149954699146534912
-api.security.app.account-config.[android-1].app-secret = 16a9cc89a54511e993fc506b4bbe1bc4
-api.security.app.account-config.[ios-1].app-id = 1149960309183299584
-api.security.app.account-config.[ios-1].app-secret = 1acdf792a54511e993fc506b4bbe1bc4
-api.security.app.account-config.[h5-1].app-id = 1149961032218419200
-api.security.app.account-config.[h5-1].app-secret = 20c923b2a54511e993fc506b4bbe1bc4
+
 '''
 
 timestamp = str(int(time.time()))
-appId = '1149954699146534912'
+appId = ''
 key = appId+str(timestamp)
-appSecret = '16a9cc89a54511e993fc506b4bbe1bc4'
+appSecret = ''
 
 
 def hmac_sha256(key, appSecret):
