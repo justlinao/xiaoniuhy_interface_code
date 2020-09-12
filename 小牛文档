@@ -1,40 +1,59 @@
-http://testxnjobadmin.xiaoniuhy.com/xnjobadmin/jobinfo?jobGroup=5  定时任务调度
-http://yapi.openxiaoniu.com/project/662/interface/api 接口文档
-https://docs.qq.com/sheet/DUU1LSFRnZFNibUZ3?tab=BB08J2 1.0版本开发测试进度表
-http://git.xiaoniuhy.com/qx-showlive/qx-showlive-document  git配置文档
 
-测试人员数据库账密
-    ·rm-uf6muqdsogu7h721o.mysql.rds.aliyuncs.com:3306
-    ·rm-uf6muqdsogu7h721oro.mysql.rds.aliyuncs.com:3306
-    ·172.16.11.138:3306
-    ·账号/密码
-    ·qx_live_test1/U6MfrHNvlUw1##XJqXqTNb
+飞鱼清理
 
-http://yamiapk.xiaoniuhy.com/view/all/job/qxzhibo/ 安卓Jenkins
-http://jk.openxiaoniu.com/view/qxshow-%E5%8D%83%E5%AF%BB/job/BuildApp/  服务端Jenkins
-http://jk.openxiaoniu.com/job/%E5%8D%83%E5%AF%BB%E7%9B%B4%E6%92%ADH5/   H5Jenkins
-账密 qxshow qxshow_123
+dev环境
+后管地址
+http://testmpclearmh5.mloveli.com/
+账号密码admin/123456
 
+服务端域名
 
-产品需求文档，通过此链接即获得权限  https://lanhuapp.com/url/w8lau-rwVic
-后台的需求文档：https://lanhuapp.com/url/5Robh
-UI设计：https://lanhuapp.com/url/WzJsr-7GzoY
+后台:
+dev-cleadmin.mloveli.com
+api:
+dev-clesystem.mloveli.com
 
+Mysql
 
+host:rm-uf6muqdsogu7h721o.mysql.rds.aliyuncs.com
+port:3306
+username: clear_dev
+password: IC8r##@#!f5hl9Me1
 
 
+redis
 
-内部礼物下发：gift_knapsack_record表  字段：gift_grant_type为2 内部礼物gift_source为4，撤回为5，撤回后gift_knapsack_sum里的下发的礼物数据删除掉
-gift_grant_relation 礼物发放主播映射 pass
-用户的账户表 account_trade_record source_type为4 pass
-主播收益 和 用户赠送礼物gift_send_receive_record 表里的gift_grant_type为2 pass
-主播收益星光account_star_light表 pass
-inside_can_user_star_light 内部礼物可用星光值 pass
-total_star_light 总累计收获星光值 pass
+host：r-uf61z84u733tugqsuj.redis.rds.aliyuncs.com
+port：6379
+password：fzcfQwuMH2q
+database：5
 
-用户id：213283522
-主播customerid 527512cc52214730829f79a5b266f706
-主播customerid：04a096016a4143a1a41d30064b456268 uid：213283759
-安卓用户customerid ：c3d69445835d4fc2b52903321cfda555
-IOS用户customerid：6da407e07f1348349be91b86356ca339
+test环境
+后管地址
+http://testmpclearmh5.mloveli.com/
+账号密码admin/123456
+
+服务端域名
+
+后台:
+fat-cleadmin.mloveli.com
+api:
+fat-clesystem.mloveli.com
+
+Mysql
+
+host:rm-uf6muqdsogu7h721o.mysql.rds.aliyuncs.com
+port:3306
+username: clear_test
+password: !iCc4qjR7!dKlfr#
+
+
+redis
+
+host：r-uf61z84u733tugqsuj.redis.rds.aliyuncs.com
+port：6379
+password：fzcfQwuMH2q
+database：6@李闹(闹闹)  @段永福(段浪)  @陈凯宇(之初)  @麻智勇(聂风)
+
+
 
