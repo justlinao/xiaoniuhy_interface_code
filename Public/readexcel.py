@@ -9,7 +9,7 @@ class ReadExcel:
         加载excel
         :return: wb
         """
-        wb = openpyxl.load_workbook(r'E:\xiaoniuhy_interface_code\Public\test.xlsx')
+        wb = openpyxl.load_workbook(r'C:\Users\linao\Documents\WXWork\1688851854143204\Cache\File\2020-09\飞鱼清理打包规则.xlsx')
         return wb
 
     def get_sheets_data(self, index=None):
@@ -98,5 +98,13 @@ class ReadExcel:
         return num
 
 
-ReadExcel = ReadExcel()
+if __name__ == '__main__':
+    ReadExcel = ReadExcel()
+    result = ReadExcel.get_columns_value('B')
+    print(result)
+    result.pop(0)
+    print(result)
+    with open(r'C:\Users\linao\Desktop\channel.txt', 'w+', encoding='utf-8') as f:
+        for i in result:
+            f.write('fyclean_hellogeek_'+i + '\n')
 

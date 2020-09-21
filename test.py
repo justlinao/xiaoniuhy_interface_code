@@ -43,14 +43,21 @@ def test():
     return new_list
 
 
-# def test1(list):
-#     with open(r'C:\Users\linao\Desktop\111.txt', 'w', encoding='utf-8') as f:
-#         for i in list:
-#             f.write(i)
-#             f.write("\r\n")
-#
-#     f.close()
-#
 
-test()
 
+# list = [5, 3, 4, 5, 21, 78]
+# count = len(list)
+# for i in range(count-1):
+#     for j in range(0, count-i-1):
+#         if list[j+1] > list[j]:
+#             list[j], list[j+1] = list[j+1], list[j]
+# print(list)
+# for i in range(1, 10):
+#     # print("*")
+#     for j in range(1, i+1):
+#         print("%s*%s=%s" % (i, j, i*j), end='\t')
+#     print(' ')
+import redis
+pool = redis.ConnectionPool(host="r-uf61z84u733tugqsuj.redis.rds.aliyuncs.com", port=6379, db=2, password='fzcfQwuMH2q')
+r = redis.Redis(connection_pool=pool)
+print(r.get("active_user_position_name:active_user_position_new_20200918_1", ).decode())

@@ -13,9 +13,9 @@ def test():
     new_list = []
     for i in list:  # 查找两个列表不同的元素
         if i not in new_list:
-            new_list.append(i)  # 相同的添加到新列表
+            new_list.append(i)  # 不重复的写入新的列表
         else:
-            print(i)  # 不同的打印出来
+            print(i)  # 打印重复的
     print(new_list)
     count = 0
     with open(r'C:\Users\linao\Desktop\渠道.txt', 'w', encoding='utf-8') as f:
@@ -52,9 +52,10 @@ def test_1(list):
         elif i.startswith('xgwt'):
             list_xigua.append(i)
 
-        else:
-            i.startswith('xywt')
+        elif i.startswith('xywt'):
             list_xiangyun.append(i)
+        else:
+            pass
 
     with open(r'C:\Users\linao\Desktop\365.txt', 'w+', encoding='utf-8') as f:
         for k in list_365:
@@ -76,6 +77,7 @@ def test_1(list):
     print("写入早晚天气%s条" % tianqi_zaowan)
     print("写入西瓜天气%s条" % tianqi_xigua)
     print("写入祥云天气%s条" % tianqi_xiangyun)
+    print("总计-----{}-----条".format(tianqi_xiangyun+tianqi_365+tianqi_xigua+tianqi_zaowan))
 
 
 test_1(test())
