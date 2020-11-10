@@ -38,10 +38,12 @@ def test_1(list):
     list_xigua =[]
     list_xiangyun = []
     list_zaowan = []
+    list_feiyu = []
     tianqi_365 = 0
     tianqi_zaowan = 0
     tianqi_xigua = 0
     tianqi_xiangyun = 0
+    qingli_feiyu = 0
     for i in list:
         if i.startswith('365wt'):
             list_365.append(i)
@@ -55,7 +57,7 @@ def test_1(list):
         elif i.startswith('xywt'):
             list_xiangyun.append(i)
         else:
-            pass
+            list_feiyu.append(i)
 
     with open(r'C:\Users\linao\Desktop\365.txt', 'w+', encoding='utf-8') as f:
         for k in list_365:
@@ -73,11 +75,16 @@ def test_1(list):
         for n in list_xiangyun:
             f.write(n + '\n')
             tianqi_xiangyun += 1
+    with open(r'C:\Users\linao\Desktop\feiyu.txt', 'w+', encoding='utf-8') as f:
+        for o in list_feiyu:
+            f.write(o + '\n')
+            qingli_feiyu += 1
     print("写入365天气%s条" % tianqi_365)
     print("写入早晚天气%s条" % tianqi_zaowan)
     print("写入西瓜天气%s条" % tianqi_xigua)
     print("写入祥云天气%s条" % tianqi_xiangyun)
-    print("总计-----{}-----条".format(tianqi_xiangyun+tianqi_365+tianqi_xigua+tianqi_zaowan))
+    print("写入飞鱼清理%s条" % qingli_feiyu)
+    print("总计-----{}-----条".format(tianqi_xiangyun+tianqi_365+tianqi_xigua+tianqi_zaowan+qingli_feiyu))
 
 
 test_1(test())

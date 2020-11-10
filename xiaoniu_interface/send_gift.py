@@ -9,5 +9,5 @@ headers = json_headers()
 def sendgift():
     url = "http://qx-fat.qianshi188.com/gateway/gift/gift/send"
     data = {""}
-    re = requests.post(url=url, headers=headers, data=)
+    re = requests.post(url=url, headers=headers, data=None)
 

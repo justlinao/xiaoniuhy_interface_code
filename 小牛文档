@@ -1,1 +1,14 @@
 渠道包 密码：2y2qvg941ZQ
+清除logcat内容，使用命令adb logcat -c
+.启动logcat，使用命令adb logcat ActivityManager:I *:s
+.启动要查看的程序
+第三种方法
+启动应用后，输入adb shell dumpsys window | findstr mCurrentFocus
+
+
+
+
+com.geek.weather365
+
+pv 代表一个用户展示的次数
+uv 代表用户
