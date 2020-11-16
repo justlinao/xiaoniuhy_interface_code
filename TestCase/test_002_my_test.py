@@ -13,9 +13,9 @@ class Login(unittest.TestCase):
         pass
 
     def test_excel_login(self):
-        rows = ReadExcel.get_rows()  # 获取表单的所有行
+        rows = ReadExcel().get_rows()  # 获取表单的所有行
         for i in range(rows):
-            data = ReadExcel.get_row_value(i+2)  # 获取每一行的数据，返回的是list
+            data = ReadExcel().get_row_value(i+2)  # 获取每一行的数据，返回的是list
             if data[0] != None:
                 self.login = my_login(data[0], data[1])  # 获取具体单元格的数据入参
                 self.assertEquals(self.login[0], data[2])

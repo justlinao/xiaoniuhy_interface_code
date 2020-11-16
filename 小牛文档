@@ -5,10 +5,13 @@
 第三种方法
 启动应用后，输入adb shell dumpsys window | findstr mCurrentFocus
 
+adb logcat |find "com.hellogeek.fycleanking" >  C:\Users\linao\Desktop\log\logcat.log 抓取指定app日志输出到文件
 
 
 
-com.geek.weather365
+
+com.geek.weather365  365天气
+com.geek.zwweatherfast 早晚极速
 
 pv 代表一个用户展示的次数
 uv 代表用户

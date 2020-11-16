@@ -7,7 +7,7 @@ from xiaoniu_interface.my_test import my_login
 from Public.log import get_log
 from Public.readexcel import ReadExcel
 import ddt
-data = ReadExcel.get_rows_value()
+data = ReadExcel().get_rows_value()
 
 @ddt.ddt
 class Login(unittest.TestCase):
