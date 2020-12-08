@@ -6,6 +6,7 @@ from xiaoniu_interface.login import login
 import ddt
 from Public.log import get_log
 
+
 @ddt.ddt
 class Login(unittest.TestCase):
     def setUp(self):

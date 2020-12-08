@@ -65,3 +65,13 @@ test1(test())
 i = "test.gz"
 a = i.split(".")[-1]
 print(a)
+
+
+def fun(x):
+    return x**2
+
+
+list = [1, 2, 3, 4, 5]
+lis = map(fun, list)
+y = [i for i in lis if i > 10]
+print(y)
