@@ -13,7 +13,7 @@ def my_login(user, password):
     re = requests.post(url=url, data=data, headers=headers)
     # print(re.status_code, json.loads(re.text))
 
-    return [re.status_code, json.loads(re.text)]
+    return [re.status_code]
 
 
 

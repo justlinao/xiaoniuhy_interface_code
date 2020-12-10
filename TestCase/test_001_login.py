@@ -16,8 +16,8 @@ class Login(unittest.TestCase):
     @ddt.unpack
     def test_login(self, A, B):
         self.login = login(A, B)
-        self.assertEquals(self.login, 200, '与预期不符合用例失败')
         get_log().info('登录接口请求结果%s' % self.login)
+        self.assertEquals(self.login, 200, '与预期不符合用例失败')
 
     def tearDown(self):
         pass

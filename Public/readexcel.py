@@ -9,7 +9,7 @@ class ReadExcel:
         加载excel
         :return: wb
         """
-        wb = openpyxl.load_workbook(r'C:\Users\linao\Documents\WXWork\1688851854143204\Cache\File\2020-09\飞鱼清理打包规则.xlsx')
+        wb = openpyxl.load_workbook(r'E:\xiaoniuhy_interface_code\Public\test.xlsx')
         return wb
 
     def get_sheets_data(self, index=None):

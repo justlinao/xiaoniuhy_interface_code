@@ -15,7 +15,7 @@ def login(customerPhone, phoneCode):
             'ipAddress': '192.168.1.1',
             'source': '1'}
     re = requests.post(headers=headers, url=url, data=json.dumps(data))
-    print(re.status_code, re.text)
+    # print(re.status_code, re.text)
     # re = json.loads(re.text)
     return re.status_code
     # customerToken = re['data']['customerToken']
