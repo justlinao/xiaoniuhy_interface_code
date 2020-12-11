@@ -20,7 +20,7 @@ class Login(unittest.TestCase):
         self.login = my_login(user, password)  # 获取具体单元格的数据入参
         get_log().info("账号：{} 密码：{}".format(user, password))
         get_log().info('登录接口请求结果%s' % self.login)
-        self.assertEqual(self.login[0], except_code, "与预期结果不一致，用例失败")
+        self.assertEqual(self.login, except_code, "与预期结果不一致，用例失败")
 
     def tearDown(self):
         pass

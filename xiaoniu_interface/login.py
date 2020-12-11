@@ -8,7 +8,8 @@ env = read_config()
 
 
 def login(customerPhone, phoneCode):
-    url = 'http://%s/gateway/customer/customer/registerLogin' % env
+    # url = 'http://%s/gateway/customer/customer/registerLogin' % env
+    url = 'http://127.0.0.1:5000/login'
     data = {'registerLoginType': '1', 'customerPhone': customerPhone, 'phoneCode': phoneCode, 'appName': '1',
             'appCloneName': '001',
             'deviceId': '867779032708951', 'osVersion': '1', 'sdkVersion': '10', 'appVersion': '1.0',
