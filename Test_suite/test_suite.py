@@ -72,7 +72,7 @@ def get_report(test_report):
 
 
 def send_qyweixin(counts, success_counts, fail_counts, fail_list):
-    get_test_log = get_report(path + r'\Log')
+    get_test_log = get_report(path + r'/Log')
     with open(get_test_log, 'r') as f:  # 读取最新的接口请求日志发送到指定群里
         lines = f.readlines()
         result = "".join(lines)  # 列表转成str
@@ -116,7 +116,7 @@ def send_qyweixin(counts, success_counts, fail_counts, fail_list):
 if __name__ == '__main__':
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 当前目录最上级
     print(path)
-    case_path = path + r'\TestCase'
+    case_path = path + r'/TestCase'
     print(case_path)
     discover = unittest.defaultTestLoader.discover(case_path,
                                                    pattern="test*.py",
