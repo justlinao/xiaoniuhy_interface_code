@@ -4,6 +4,9 @@ import unittest
 import requests
 import sys
 import os
+
+import schedule as schedule
+
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
@@ -141,3 +144,4 @@ if __name__ == '__main__':
     send_qyweixin(counts, success_counts, fail_counts, fail_list)
 
 # send_email(get_report)
+# schedule.every().day.at("10:30").do(main) mac上定时执行任务
