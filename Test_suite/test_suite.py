@@ -145,3 +145,5 @@ if __name__ == '__main__':
 
 # send_email(get_report)
 # schedule.every().day.at("10:30").do(main) mac上定时执行任务
+# while True:
+#     schedule.run_pending()
