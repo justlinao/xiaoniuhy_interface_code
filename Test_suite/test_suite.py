@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-
+import re
 import unittest
 import requests
 import sys
@@ -79,7 +79,7 @@ def send_qyweixin(counts, success_counts, fail_counts, fail_list):
     with open(get_test_log, 'r') as f:  # 读取最新的接口请求日志发送到指定群里
         lines = f.readlines()
         result = "".join(lines)  # 列表转成str
-        url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=87a28e87-88a4-4a1c-90c9-41dc09e97204"
+        url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=957e2d2e-cc5c-41c3-ae85-63ffacbee509"
         headers = {"Content-Type": "text/plain"}
         # s = ("执行%s个接口, 成功数%s, 失败数%s，" % (counts, success_counts, fail_counts))
         if fail_counts == 0:  # 如何没有失败的接口 就不展示失败接口
@@ -105,8 +105,8 @@ def send_qyweixin(counts, success_counts, fail_counts, fail_list):
                         # result +
                                '\n'+'执行接口数：'+'<font color=\"info\">%s</font>' % counts +     # info 绿色，comment灰色， warning黄色
                                '\n'+'成功数：'+'<font color=\"info\">%s</font>' % success_counts +
-                               '\n'+'失败数：'+'<font color=\"warning\">%s</font>' % fail_counts +
-                               '\n'+'失败接口：'+'\n'+'<font color=\"warning\">%s</font>' % fail_list +
+                               '\n'+'异常数：'+'<font color=\"warning\">%s</font>' % fail_counts +
+                               '\n'+'异常接口：'+'\n'+'<font color=\"warning\">%s</font>' % fail_list +
                                '\n' + '成功率' + '<font color=\"warning\">%s</font>' % (success_counts / counts * 100) +
                                '<font color=\"warning\">%s</font>' % '%'
                     # "mentioned_list": ["@all"]  # @所有人
@@ -118,9 +118,9 @@ def send_qyweixin(counts, success_counts, fail_counts, fail_list):
 
 if __name__ == '__main__':
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 当前目录最上级
-    print(path)
+    # print(path)
     case_path = path + r'/TestCase'
-    print(case_path)
+    # print(case_path)
     discover = unittest.defaultTestLoader.discover(case_path,
                                                    pattern="test*.py",
                                                    top_level_dir=None)   # 测试模块的顶层目录，如果没有顶层目录，默认为None
@@ -134,16 +134,22 @@ if __name__ == '__main__':
     # test_result = unittest.TextTestRunner().run(discover)  # 执行case
     counts = discover.countTestCases()  # 总个数
     success_counts = counts - int(len(test_result.failures))  # 成功个数
+    # print(test_result.success_count)
     fail_counts = int(len(test_result.failures))  # 失败个数
     fail_list = []  # 储存失败接口
+
     if test_result.failures:
         for case, reason in test_result.failures:
-            fail_list.append(case.id() + '\n')
+            fail_reason = re.findall(r'AssertionError: (.*)\n\nDu', reason, re.S)  # 失败原因
+            fail_reason = str(fail_reason[0])  # 正则返回的是列表格式
+            fail_list.append(case.id() + ", " + fail_reason + '\n')
+
     fail_list = ''.join(fail_list)
     # get_report1 = get_report(path+r'\TestReport')  # 获取最新的测试报告
     send_qyweixin(counts, success_counts, fail_counts, fail_list)
 
 # send_email(get_report)
-# schedule.every().day.at("10:30").do(main) mac上定时执行任务
-# while True:
-#     schedule.run_pending()
+# mac上定时执行任务
+
+
+

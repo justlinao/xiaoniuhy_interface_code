@@ -19,7 +19,7 @@ def forbidden_save():
     re = requests.post(url=url, headers=headers, data=json.dumps(data))
     text = "举报接口执行结果："
     text = text + str(re.status_code)
-    return text
+    return re.status_code
 
 
 forbidden_save()
