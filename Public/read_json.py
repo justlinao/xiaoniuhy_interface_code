@@ -1,9 +1,11 @@
 # -*- coding: UTF-8 -*-
 import json
+import os
 
-with open(r"E:\xiaoniuhy_interface_code\demo.json", encoding="utf-8") as f:
+path = os.path.dirname(__file__)
+
+with open(path+"/demo.json", encoding="utf-8") as f:
     data = json.load(f)
-
     print(data)
 
 # list = [1, 5, 9, 4]
