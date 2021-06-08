@@ -4,7 +4,7 @@ import requests
 from Public.response_time import res_time
 
 """
-登录接口
+配置下发
 """
 
 

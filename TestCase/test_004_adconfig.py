@@ -9,9 +9,9 @@ class MyTestCase(unittest.TestCase):
     def setUp(self):
         pass
 
-    def test_something(self):
+    def test_adconfig(self):
         self.get_adconfig = get_adconfig()
-        get_log().info('获取底部菜单接口--->status_code：{},  请求时长：{}'.format(self.get_adconfig[1], self.get_adconfig[0]))
+        get_log().info('广告列表值接口--->status_code：{},  请求时长：{}'.format(self.get_adconfig[1], self.get_adconfig[0]))
         try:
             self.assertEquals(self.get_adconfig[1], 200, '请求失败')
             self.assertLess(self.get_adconfig[0], read_config(), '请求超时，实际请求时长%s毫秒' % self.get_adconfig[0])

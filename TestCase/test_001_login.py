@@ -9,9 +9,10 @@ class MyTestCase(unittest.TestCase):
     def setUp(self):
         pass
 
-    def test_something(self):
+    def test_login(self):
         self.get_login = get_login()
-        get_log().info('获取底部菜单接口--->status_code：{},  请求时长：{}'.format(self.get_login[1], self.get_login[0]))
+        get_log().info('登录接口--->status_code：{},  '
+                       '请求时长：{}'.format(self.get_login[1], self.get_login[0]))
         try:
             self.assertEquals(self.get_login[1], 200, '请求失败')
             self.assertLess(self.get_login[0], read_config(), '请求超时，实际请求时长%s毫秒' % self.get_login[0])

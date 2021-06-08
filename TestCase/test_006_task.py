@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
     def setUp(self):
         pass
 
-    def test_something(self):
+    def test_task(self):
         self.get_task = get_task()
         get_log().info('获取底部菜单接口--->status_code：{},  请求时长：{}'.format(self.get_task[1], self.get_task[0]))
         try:
